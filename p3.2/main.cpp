@@ -15,11 +15,11 @@ int main()
     float number;
     cin >> number;
     int grade = number;
-    float tie_breaker = (number - grade) * 100;
+    float xtra = (number - grade) * 100;
     string letter, suffix;
     
     
-    //cout << number << " " << grade << " " << tie_breaker << "\n";
+    //cout << number << " " << grade << " " << xtra << "\n";
     
     if (number >= 3.7)
     {
@@ -45,11 +45,11 @@ int main()
     {
         letter = "F";
     }
-    if (tie_breaker >= 85 && tie_breaker <= 99.9)
+    if (xtra >= 85 && xtra <= 99.9 && letter != "F")
     {
         suffix = "-";
     }
-    else if (tie_breaker > 0.1 && tie_breaker< 70)
+    else if (xtra > 0.1 && xtra< 70 && letter != "F")
     {
         suffix = "+";
     }
